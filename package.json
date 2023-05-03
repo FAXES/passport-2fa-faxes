@@ -1,6 +1,6 @@
 {
   "name": "passport-2fa-faxes",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "TOTP based Two-Factor Authentication for Passport and Node.js, edited and updated.",
   "main": "./lib",
   "scripts": {

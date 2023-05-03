@@ -8,6 +8,7 @@ Originally based off of `passport-2fa-totp`.
 - Added `totpOptional` to allow accounts to succeed authentication without 2FA being attached on the account, but if it is, it will require it.
 - Added `removeUserKeys` as an option to remove the defines keys from the users session object. for example, if you return a whole DB entry, you can here remove sensitive data like the password from the session object.
 - Cleaned up some functions
+- If `done()` function has `"UNREG"` passed as the third parameter it resolves with `removeUserKeys` option utilised.
 
 ## Install
 

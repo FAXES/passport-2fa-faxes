@@ -6,6 +6,7 @@ Originally based off of `passport-2fa-totp`.
 **Key Changes From Original:**
 - Added `GoogleAuthenticator.verify()` function.
 - Added `totpOptional` to allow accounts to succeed authentication without 2FA being attached on the account, but if it is, it will require it.
+- Added `removeUserKeys` as an option to remove the defines keys from the users session object. for example, if you return a whole DB entry, you can here remove sensitive data like the password from the session object.
 - Cleaned up some functions
 
 ## Install
@@ -71,6 +72,7 @@ The available options are:
 * `skipTotpVerification` - Optional defaults to false. TOTP code verification is skipped if it is set to be true.
 * `passReqToCallback` - Optional defaults to false. Pass `request` object to the callbacks if it is set to be true.
 * `totpOptional` - Optional defaults to false. Allow login to succeed, if no 2FA is present for account.
+* `removeUserKeys` - Optional defaults to `[]`. Removed the defined keys from the req.user object in the session data.
 
 #### Authenticate Requests
 
